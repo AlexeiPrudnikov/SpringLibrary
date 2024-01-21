@@ -1,10 +1,9 @@
-package ru.geekbrains.Library.Models;
+package ru.geekbrains.Library.models;
 
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Getter
 public class Issue {

@@ -1,11 +1,11 @@
-package ru.geekbrains.Library.Services;
+package ru.geekbrains.Library.services;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.geekbrains.Library.Models.Issue;
-import ru.geekbrains.Library.Repositories.BookRepository;
-import ru.geekbrains.Library.Repositories.IssueReposirory;
-import ru.geekbrains.Library.Repositories.ReaderRepository;
+import ru.geekbrains.Library.models.Issue;
+import ru.geekbrains.Library.repositories.BookRepository;
+import ru.geekbrains.Library.repositories.IssueReposirory;
+import ru.geekbrains.Library.repositories.ReaderRepository;
 
 import java.util.List;
 

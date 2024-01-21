@@ -1,11 +1,10 @@
-package ru.geekbrains.Library.Controllers;
+package ru.geekbrains.Library.controllers;
 
 import org.springframework.web.bind.annotation.*;
-import ru.geekbrains.Library.Models.Book;
-import ru.geekbrains.Library.Models.Issue;
-import ru.geekbrains.Library.Models.Reader;
-import ru.geekbrains.Library.Repositories.ReaderRepository;
-import ru.geekbrains.Library.Services.ReaderService;
+import ru.geekbrains.Library.models.Issue;
+import ru.geekbrains.Library.models.Reader;
+import ru.geekbrains.Library.repositories.ReaderRepository;
+import ru.geekbrains.Library.services.ReaderService;
 
 
 import java.util.List;

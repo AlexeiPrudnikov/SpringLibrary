@@ -1,14 +1,16 @@
-package ru.geekbrains.Library.Services;
+package ru.geekbrains.Library.services;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.geekbrains.Library.Models.Issue;
-import ru.geekbrains.Library.Models.IssueRequest;
-import ru.geekbrains.Library.Repositories.BookRepository;
-import ru.geekbrains.Library.Repositories.IssueReposirory;
-import ru.geekbrains.Library.Repositories.ReaderRepository;
+import ru.geekbrains.Library.models.Book;
+import ru.geekbrains.Library.models.Issue;
+import ru.geekbrains.Library.models.IssueRequest;
+import ru.geekbrains.Library.repositories.BookRepository;
+import ru.geekbrains.Library.repositories.IssueReposirory;
+import ru.geekbrains.Library.repositories.ReaderRepository;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -35,6 +37,16 @@ public class IssueService {
         }
         issueReposirory.addIssue(issue);
         return issue;
+    }
+    public List<Book> getBooksByReader(long id){
+        List<Issue> issues =  issueReposirory.getAllIssue().stream()
+                .filter(it -> it.getReaderId() == id && it.getReturned_at() == null)
+                .toList();
+        List<Book> books = new ArrayList<>();
+        for (Issue issue : issues){
+            books.add(bookRepository.getBookById(issue.getBookId()));
+        }
+        return books;
     }
 
 }

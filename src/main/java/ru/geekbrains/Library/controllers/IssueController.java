@@ -1,14 +1,13 @@
-package ru.geekbrains.Library.Controllers;
+package ru.geekbrains.Library.controllers;
 
 
 import org.springframework.http.HttpStatus;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.geekbrains.Library.Models.Issue;
-import ru.geekbrains.Library.Models.IssueRequest;
-import ru.geekbrains.Library.Repositories.IssueReposirory;
-import ru.geekbrains.Library.Services.IssueService;
+import ru.geekbrains.Library.models.Issue;
+import ru.geekbrains.Library.models.IssueRequest;
+import ru.geekbrains.Library.repositories.IssueReposirory;
+import ru.geekbrains.Library.services.IssueService;
 
 @RestController
 @RequestMapping("/issue")
@@ -29,14 +28,6 @@ public class IssueController {
         issueReposirory.closeIssue(id);
         return issueReposirory.getIssueByID(id);
     }
-    /*
-    @PutMapping
-    public Issue addIssue(@RequestParam long bookID, @RequestParam long readerID){
-        IssueRequest request = new IssueRequest(bookID, readerID);
-        return issueService.addIssue(request);
-    }
-
-     */
     @PutMapping()
     public ResponseEntity<?> addIssue(@RequestParam long bookID, @RequestParam long readerID){
         try {

@@ -1,7 +1,6 @@
-package ru.geekbrains.Library.Models;
+package ru.geekbrains.Library.models;
 
 import lombok.Getter;
-import lombok.Setter;
 
 @Getter
 public class Book {

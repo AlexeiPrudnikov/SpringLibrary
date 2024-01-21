@@ -1,8 +1,8 @@
-package ru.geekbrains.Library.Repositories;
+package ru.geekbrains.Library.repositories;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Repository;
-import ru.geekbrains.Library.Models.Reader;
+import ru.geekbrains.Library.models.Reader;
 
 import java.util.ArrayList;
 import java.util.List;

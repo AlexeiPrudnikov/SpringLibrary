@@ -1,13 +1,10 @@
-package ru.geekbrains.Library.Repositories;
+package ru.geekbrains.Library.repositories;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Repository;
-import ru.geekbrains.Library.Models.Book;
-import ru.geekbrains.Library.Models.Issue;
-import ru.geekbrains.Library.Models.IssueRequest;
+import ru.geekbrains.Library.models.Issue;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Repository
@@ -28,6 +25,8 @@ public class IssueReposirory {
                 new Issue(2,2,LocalDate.now()),
                 new Issue(3,2,LocalDate.now())
         ));
+        Issue issue = issues.get(2);
+        issue.setReturned_at(LocalDate.now());
     }
     public Issue getIssueByID(long id) {
         return issues.stream()

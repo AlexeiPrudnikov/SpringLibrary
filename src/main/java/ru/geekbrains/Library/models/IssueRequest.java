@@ -1,4 +1,4 @@
-package ru.geekbrains.Library.Models;
+package ru.geekbrains.Library.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,9 +1,8 @@
-package ru.geekbrains.Library.Controllers;
+package ru.geekbrains.Library.controllers;
 
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
-import ru.geekbrains.Library.Models.Book;
-import ru.geekbrains.Library.Repositories.BookRepository;
+import ru.geekbrains.Library.models.Book;
+import ru.geekbrains.Library.repositories.BookRepository;
 
 import java.util.List;
 import java.util.NoSuchElementException;
